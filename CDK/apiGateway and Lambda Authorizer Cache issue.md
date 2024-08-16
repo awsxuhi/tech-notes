@@ -1,0 +1,4 @@
+当您在API Gateway中使用Lambda Authorizer时，API Gateway会自动为Lambda Authorizer启用缓存，以提高性能。API Gateway使用HTTP头部中的 `Authorization` 字段（或其它指定的字段）作为缓存键，并将缓存键与Lambda Authorizer的返回值相关联。
+
+用token来判断是否可以直接使用缓存中的Lambda Authorizer的返回值。也就是说只要token不变，就会使用缓存。而一般来说token会在1小时后才refresh，这就造成尽管我在访问不同的资源，authorizer在一个小时内都会使用缓存中的策略数据。
+

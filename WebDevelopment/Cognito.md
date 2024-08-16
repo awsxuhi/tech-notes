@@ -1,0 +1,44 @@
+
+
+
+
+```shell
+Password minimum length
+8 character(s)
+Password requirements
+Contains at least 1 number
+Contains at least 1 special character
+Contains at least 1 uppercase letter
+Contains at least 1 lowercase letter
+Temporary passwords set by administrators expire in
+7 day(s)
+```
+
+OIDC: xuhifed
+
+```shell
+client secret for cliend id xuhifed: HeZhpxx0UbwSRLs9VAa0hS1jcj5jcXSpJvP6MIlymzSv
+
+client secret for client id game24: Jebhrnye2RyBo5BZJoGTNwmriaRsUi5cLZLpeoDCiIvW
+
+client secret for client id xuhifedtest:UJpckPi01UgmEnj0CbxQNmpwpfEISNHfL7GH7mSfplim
+```
+
+Amazon Midway Login URL:
+
+```shell
+https://midway-auth.amazon.com/login?next=%2FSSO%2Fredirect%3Fclient_id%3Dhttps%253A%252F%252Fidp-integ-eu-west-1.federate.amazon.com%26redirect_uri%3Dhttps%253A%252F%252Fidp-integ-eu-west-1.federate.amazon.com%252Fapi%252Fv1%252Fintermediate%26response_type%3Did_token%26scope%3Dopenid%26nonce%3DI230224042817756DUBJQ9TYPGZTIN0%26state%3Dv1eu-west-1_I230224042817756DUBJQ9TYPGZTIN0_AgR4lgamcAjtsgA4cICVe0Pe4vRyadoMWRd4LYm_XgGPv1EAKAABAAN0eG4AH0kyMzAyMjQwNDI4MTc3NTZEVUJKUTlUWVBHWlRJTjAAAQAHYXdzLWttcwBLYXJuOmF3czprbXM6ZXUtd2VzdC0xOjA2NjU3MDk2OTgzMzprZXkvMzJhOTkwMDMtNjhkNi00ZDExLTgwMTEtNWYzZGY1YTQyNmM3ALgBAgEAeA2vGAlLAeDro1UcXoOf1o9uortpkFo3uwfkFO6mjSmFATKnMjXh3Vb2YLPtE0j_9T8AAAB-MHwGCSqGSIb3DQEHBqBvMG0CAQAwaAYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAxR5pX8cZOi8DM993ECARCAO58eXnqS9BQSWZjQZ-6UuZ90CDuaeISg8kGWsPOOjRwpHGlU3O7lYWWvth---8puj-Xkdx0VSOll1GqUAgAAEADhwP4A2024KarT8RlQ-CBOtwngAppBd22AHaUfLaBEAllMXMkuZ1Zmie8NgEAQNrP_____AAAAAQAAAAAAAAAAAAAAAQAAAFrJkE4PUe5UP3GfXzkI94OYZD3fSP8FV10nGTyKLV-_pH3HfIi4_J-uxHGmqIPRHbAa_lazfY2mioxvN6WJn4y6W38VV_zTEkg-uQ7KwUdo3ePDi9JBX7RssibiY-f5F1E3tttMJPz1gtcr&require_digital_identity=false#midway
+```
+
+```shell
+https://midway-auth.amazon.com/login?next=%2FSSO%2Fredirect%3Fclient_id%3Dhttps%253A%252F%252Fidp.federate.amazon.com%26redirect_uri%3Dhttps%253A%252F%252Fidp.federate.amazon.com%252Fapi%252Fv1%252Fwsfed%26response_type%3Did_token%26scope%3Dopenid%26nonce%3DP230225030701534DUBBDLATUPHZUW8%26state%3Dv1eu-west-1_P230225030701534DUBBDLATUPHZUW8_AgR4K4AkQohf_pB5Q38xODFsYy9lZKliRWDwf9t3A2cQ7goAKAABAAN0eG4AH1AyMzAyMjUwMzA3MDE1MzREVUJCRExBVFVQSFpVVzgAAQAHYXdzLWttcwBLYXJuOmF3czprbXM6ZXUtd2VzdC0xOjY0MjM5NzE3MDM1MDprZXkvNGI4NDE1M2EtNTJkOS00MzUxLTg4MGQtNTA0MmJmMDgyODdkALgBAgEAeIxaoZQGfw2CUledXvTXwALRvHWvGT21ZfVxkuy33tOKAY9GWkpbqfj6gfs31aw0Qe4AAAB-MHwGCSqGSIb3DQEHBqBvMG0CAQAwaAYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAxj-I1ckxm3MG53EzkCARCAO677-T6ajYqkdd2NS3wjQbuDz44Bx29VD0Ol2GAYjQJcEr-QlToGcg481bgweF2I9ft7Gb5RACZe09RoAgAAEADWyF9CyNTzXSpgbGfZ0eE9pW6lFPlIPnVSe8Omud19AAAQcQNFqlm2IrJ_vr8LLab_____AAAAAQAAAAAAAAAAAAAAAQAAAFpOPNbnKrtUNV8dxmTknb1RxtpruJw5dnzFYiUpxcaauY5H2vilHWBtiGGug7OL8CO7N8smZlvjM66HcFTVSCXnY41OxS9jqItd_g1xhcYtr1zlvnk5-yOoyvQ5r4VfOJsDElZeVtXc-JXO&require_digital_identity=false#midway
+```
+
+
+
+when we create new user in cognito console, we can use the following command to force the user being enabled without email verification.
+
+```shell
+aws cognito-idp admin-set-user-password --user-pool-id xxxxxxx --username xuhai --password "asdf1234" --permanent
+```
+
