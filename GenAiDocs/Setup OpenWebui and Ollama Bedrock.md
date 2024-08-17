@@ -4,7 +4,7 @@ A：You need https for that. If you use localhost (the server being in the same 
 
 解决方法之一是在浏览器中打开chrome://flags/#unsafely-treat-insecure-origin-as-secure，然后将这个项目设置为enable，同时把需要浏览器认为安全的域名放到框中，如图，然后点击relaunch
 
-![image-20240817210150673](/Users/xuhi/Library/Application Support/typora-user-images/image-20240817210150673.png)
+![image-20240817212618250](./images/Setup OpenWebui and Ollama Bedrock/image-20240817212618250.png)
 
 参考链接：
 
