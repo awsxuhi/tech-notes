@@ -92,7 +92,7 @@ sudo docker run --rm --gpus all nvidia/cuda:12.6.0-base-ubuntu22.04 nvidia-smi
 
 下图是正确的可以使用Ollama推理：
 
-![image-20240820151651692](./Setup g4dn Nvidia Docker Environment/image-20240820151651692.png)
+![image-20240820151651692](./Setup_g4dn_Nvidia_Docker_Environment/image-20240820151651692.png)
 
 ### 5. 测试 GPU
 
