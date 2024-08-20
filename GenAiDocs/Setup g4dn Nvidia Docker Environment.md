@@ -74,6 +74,10 @@ curl -s -L https://nvidia.github.io/nvidia-container-toolkit/$distribution/nvidi
 ```bash
 sudo apt update
 sudo apt install -y nvidia-docker2
+
+# Configure Docker to use Nvidia driver
+sudo nvidia-ctk runtime configure --runtime=docker
+
 sudo systemctl restart docker
 
 # 验证 NVIDIA Docker 是否正确安装：
@@ -82,9 +86,13 @@ sudo docker run --rm --gpus all nvidia/cuda:12.6.0-base-ubuntu22.04 nvidia-smi
 
 
 
+下图应该是没有成功使用GPU来做Ollama的推理。
+
 ![image-20240817003651563](/Users/xuhi/Library/Application Support/typora-user-images/image-20240817003651563.png)
 
+下图是正确的可以使用Ollama推理：
 
+![image-20240820151651692](./Setup g4dn Nvidia Docker Environment/image-20240820151651692.png)
 
 ### 5. 测试 GPU
 
