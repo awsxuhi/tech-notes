@@ -16,7 +16,7 @@
 ```
 brew install direnv
 
-# On ubuntu,use the following commands:
+# 在ubuntu上使用下面的命令安装:
 sudo apt update
 sudo apt install direnv
 ```
@@ -28,30 +28,18 @@ sudo apt install direnv
 1. 打开 `~/.zshrc` 文件：
 
    ```
-   bash
-
-
-   CopyEdit
    code ~/.zshrc
    ```
 
    或使用其他编辑器：
 
    ```
-   bash
-
-
-   CopyEdit
    nano ~/.zshrc
    ```
 
 2. 找到 `plugins=(...)` 这一行，添加 `direnv` 插件，例如：
 
    ```
-   zsh
-
-
-   CopyEdit
    plugins=(
      git
      direnv
@@ -63,14 +51,10 @@ sudo apt install direnv
 3. 保存后重新加载配置：
 
    ```
-   bash
-
-
-   CopyEdit
    source ~/.zshrc
    ```
 
-说明：Oh My Zsh 的 `direnv` 插件已经自动包含了 `eval "$(direnv hook zsh)"`，无需手动添加。
+说明：Oh My Zsh 的 `direnv` 插件已经自动包含了 `eval "$(direnv hook zsh)"`，无需手动添加。如果没有使用 Oh My Zsh，可以手动添加`eval "$(direnv hook zsh)"`到.zshrc。
 
 ---
 
@@ -79,10 +63,6 @@ sudo apt install direnv
 1. 创建并进入项目目录：
 
 ```
-bash
-
-
-CopyEdit
 mkdir my-project
 cd my-project
 ```
@@ -90,10 +70,6 @@ cd my-project
 1. 使用 uv 创建虚拟环境：
 
 ```
-bash
-
-
-CopyEdit
 uv venv
 ```
 
@@ -113,20 +89,12 @@ uv venv
 1. 在项目根目录创建 `.envrc` 文件，添加激活命令：
 
 ```
-bash
-
-
-CopyEdit
 echo 'source .venv/bin/activate' > .envrc
 ```
 
 1. 授权当前目录的 `.envrc` 文件：
 
 ```
-bash
-
-
-CopyEdit
 direnv allow
 ```
 
@@ -137,10 +105,6 @@ direnv allow
 每次进入该项目目录时，终端将自动激活虚拟环境，并显示类似提示：
 
 ```
-makefile
-
-
-CopyEdit
 direnv: loading .envrc
 direnv: export +VIRTUAL_ENV ...
 ```
@@ -148,10 +112,6 @@ direnv: export +VIRTUAL_ENV ...
 你可以通过以下命令验证虚拟环境是否生效：
 
 ```
-bash
-
-
-CopyEdit
 which python
 ```
 
@@ -170,20 +130,12 @@ which python
 每次进入项目目录后，执行：
 
 ```
-bash
-
-
-CopyEdit
 source .venv/bin/activate
 ```
 
 退出虚拟环境时执行：
 
 ```
-bash
-
-
-CopyEdit
 deactivate
 ```
 
@@ -196,30 +148,21 @@ deactivate
 - 修改 `.envrc` 文件后重新授权：
 
   ```
-  bash
-
-
-  CopyEdit
   direnv allow
+
+  或者
+  direnv allow .
   ```
 
 - 查看当前目录的 direnv 状态：
 
   ```
-  bash
-
-
-  CopyEdit
   direnv status
   ```
 
 - 撤销当前目录的授权：
 
   ```
-  bash
-
-
-  CopyEdit
   direnv deny
   ```
 
